@@ -1,0 +1,15 @@
+.row {
+    padding-bottom: 2vh;
+  }
+  
+  .enonceNotdone {
+    border-right: 3px dashed #ec3f28;
+  }
+  
+  .enonceProgress {
+    border-right: 3px dashed #f5d545;
+  }
+  
+  .enonceDone {
+    border-right: 3px dashed #52ae37;
+  }
