@@ -59,6 +59,12 @@ $(document).ready(async function() {
 	}
 })
 
+async function resetArea()
+{
+	var result = await getExercise(exercise_name);
+	$("div[id=questionContainer]").append(result)
+}
+
 async function getExercise(exercise_name) {
   
 	apiRoute = "getExercise/" + exercise_name;

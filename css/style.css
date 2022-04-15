@@ -150,8 +150,7 @@ aside {
           opacity: 1;
           visibility: visible; }
     aside .side-inner .nav-menu ul li.active a {
-      background: #ffa959
-      bac
+      background: #ffa959;
       color: #000; }
       aside .side-inner .nav-menu ul li.active a:before {
         opacity: 1;
@@ -171,7 +170,7 @@ main {
     font-size: 18px; }
   main .post-content .post-meta {
     font-size: 15px;
-    color: #ccc; }
+    color: #999; }
 
 /* Burger */
 .burger {
@@ -237,11 +236,3 @@ main {
 
 .burger:focus {
   outline: none; }
-
-.questionId {
-  display: none;
-}
-
-.inputCode {
-  font-family: monospace;
-}
