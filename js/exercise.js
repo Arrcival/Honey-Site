@@ -62,7 +62,7 @@ $(document).ready(async function() {
 async function resetArea()
 {
 	var result = await getExercise(document.getElementById("questionId").innerText);
-	$("div[id=questionContainer]").append(result)
+	$("div[id=questionContainer]").empty().append(result)
 }
 
 async function getExercise(exercise_name) {
