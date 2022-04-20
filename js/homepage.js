@@ -39,7 +39,8 @@ async function manageIcons()
 async function getResultsExercise() {
   
     apiRoute = `getResultsExercise/${username}`;
-	returnresult = 0
+	returnresult = 0;
+    apiLoading();
     await fetch(apiUrl + apiRoute,
     {
         headers: myHeaders,
@@ -49,10 +50,12 @@ async function getResultsExercise() {
         return response.text()
     })
     .then(function(text) {
-        returnresult = text 
+        returnresult = text;
+        apiSuccess();
     })
     .catch((error) => {
         console.log(error)
+        apiFailure();
     });
 
 	return returnresult

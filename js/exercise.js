@@ -14,7 +14,8 @@ async function runTests(btn) {
 
 	var codeInput = document.getElementById("codeArea").value;
   
-  	fetch(apiUrl + apiRoute,
+	apiLoading();
+  	await fetch(apiUrl + apiRoute,
 	{
 		headers: myHeaders,
 		method: "POST",
@@ -25,12 +26,14 @@ async function runTests(btn) {
   	})
   	.then(async function(text) {
   		document.getElementById("runResults").innerHTML = text;
-		await updateUserReussites()
-		await doBooleanResult(exerciseName)
+		await updateUserReussites();
+		await doBooleanResult(exerciseName);
+		apiSuccess();
   	})
 	.catch((error) => {
 		console.log(error)
 		document.getElementById("runResults").innerHTML = "";
+		apiFailure();
 	})
   	.finally(function(){
       	btn.style.display = "initial";
@@ -70,6 +73,7 @@ async function getExercise(exercise_name) {
 	apiRoute = "getExercise/" + exercise_name;
 
 	result = "";
+	apiLoading();
   	await fetch(apiUrl + apiRoute,
 	{
 		headers: myHeaders,
@@ -79,10 +83,12 @@ async function getExercise(exercise_name) {
 	  	return response.text()
   	})
   	.then(function(text) {
-	  	result = text
+	  	result = text;
+		apiSuccess();
   	})
 	.catch((error) => {
-		console.log(error)
+		console.log(error);
+		apiFailure();
 	});
 	return result
 }   
@@ -91,7 +97,8 @@ async function getExerciseResult(exercise_name) {
   
 	apiRoute = `getExerciseResult/${exercise_name}/${username}`;
 
-	result = ""
+	result = "";
+	apiLoading();
   	await fetch(apiUrl + apiRoute,
 	{
 		headers: myHeaders,
@@ -101,10 +108,12 @@ async function getExerciseResult(exercise_name) {
         return response.text();
   	})
   	.then(function(text) {
-	  	result = text
+	  	result = text;
+		apiSuccess();
   	})
 	.catch((error) => {
-		console.log(error)
+		console.log(error);
+		apiFailure();
 	});
 	return result
 }   
@@ -113,7 +122,8 @@ async function doBooleanResult(exercise_name) {
 
 	apiRoute = `getBooleanExerciseResult/${document.getElementById("questionId").innerText}/${username}`;
   
-  	fetch(apiUrl + apiRoute,
+	apiLoading();
+  	await fetch(apiUrl + apiRoute,
 	{
 		headers: myHeaders,
 		method: "GET"
@@ -122,10 +132,12 @@ async function doBooleanResult(exercise_name) {
     	return response.text()
   	})
   	.then(async function(text) {
-		manageBar(text == "2")
+		manageBar(text == "2");
+		apiSuccess();
   	})
 	.catch((error) => {
-		console.log(error)
+		console.log(error);
+		apiFailure();
 	})
 }
 

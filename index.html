@@ -23,162 +23,184 @@
   	</head>
   	<body>
   
-    
+		<div id="apiStatus" class="apiStatus">
+			<div class="spinner-border honeyText" id="apiLoading"></div>
+			<i class="icon-check-circle-o mr-3 apiSuccess" id="apiSuccess"></i>
+			<i class="icon-times-circle-o mr-3 apiFailure" id="apiFailure"></i>
+		</div>
     	<aside class="sidebar">
-      <div class="toggle">
-        <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
-              <span></span>
-            </a>
-      </div>
-      <div class="side-inner">
+      		<div class="toggle">
+        		<a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+              		<span></span>
+            	</a>
+     		 </div>
+      		<div class="side-inner">
 
-        <div class="profile">
-          	<h3 class="sitename">Honey-Learning</h3>
-			<br>
-			<span>Your name :</span>
-          	<input maxlength="15" class="name" id="username">
-        </div>
+    	    	<div class="profile">
+    	    	  	<h3 class="sitename">Honey-Learning</h3>
+					<br>
+					<span>Your name :</span>
+    	    	  	<input maxlength="15" class="name" id="username">
+    	    	</div>
 
-        <div class="counter d-flex justify-content-center">
-          <!-- <div class="row justify-content-center"> -->
-            <div class="col">
-              <strong class="number" id="reussiteCount">x</strong>
-              <span class="number-label">Done</span>
-            </div>
-            <div class="col">
-              <strong class="number">19</strong>
-              <span class="number-label">Exercises</span>
-            </div>
-          <!-- </div> -->
-        </div>
-        
-        <div class="nav-menu">
-          <ul>
-            <li class="active"><a href="#"><span class="icon-home mr-3"></span>Homepage</a></li>
-            <!--<li><a href="exercise.html"><span class="icon-location-arrow mr-3"></span>Exercises</a></li>-->
-          </ul>
-        </div>
-      </div>
-	  
-	  <i class="icon-circle-o mr-3 checkIcon"></i>
-    	  
+    	    	<div class="counter d-flex justify-content-center">
+    	    	  <!-- <div class="row justify-content-center"> -->
+    	    	    <div class="col">
+    	    	      	<strong class="number" id="reussiteCount">x</strong>
+    	    	      	<span class="number-label">Done</span>
+    	    	    </div>
+    	    	    <div class="col">
+    	    	      	<strong class="number">19</strong>
+    	    	      	<span class="number-label">Exercises</span>
+    	    	    </div>
+    	    	  <!-- </div> -->
+    	    	</div>
+			
+    	    	<div class="nav-menu">
+    	    	  	<ul>
+    	    	    	<li class="active"><a href="#"><span class="icon-home mr-3"></span>Homepage</a></li>
+    	    	    	<!--<li><a href="exercise.html"><span class="icon-location-arrow mr-3"></span>Exercises</a></li>-->
+    	    	  	</ul>
+    	    	</div>
+    	  	</div>
     	</aside>
     	<main>
     	  	<div class="site-section">
+				<div class="container">
+					<div class="row justify-content-center">
+						<button class="button-5 bordered row" type="button" data-toggle="collapse" data-target="#exerciseBasics" aria-expanded="false" aria-controls="exerciseBasics">
+							Basics</button>
+					</div>
+					<div class="row justify-content-center">
+						<button class="button-5 bordered row" type="button" data-toggle="collapse" data-target="#exerciseFunctions" aria-expanded="false" aria-controls="exerciseFunctions">
+							Functions</button>
+					</div>
+					<div class="row justify-content-center">
+						<button class="button-5 bordered row" type="button" data-toggle="collapse" data-target="#exerciseMoreBasics" aria-expanded="false" aria-controls="exerciseMoreBasics">
+							More basics</button>
+					</div>
+				</div>
     	    	<div class="container">
-    	      		<div class="row justify-content-center">
-    	          		<div id="exercise1" class="row">
-							<i class="icon-circle-o mr-3 checkIcon"></i>
-							<button class="button-5" role="button">Exercise 1 : (Print part 1)</button>
-    	          		</div>	
-    	      		</div>
-					<div class="row justify-content-center">
-						<div id="exercise2" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 2 (Print part 2)</button>
-						</div>	
+					<div id="exerciseBasics" class="collapse">
+						<div class="row justify-content-center">
+							<div id="exercise1" class="row">
+							  <i class="icon-circle-o mr-3 checkIcon"></i>
+							  <button class="button-5" role="button">Exercise 1 : Print (part 1)</button>
+							</div>	
+						</div>
+					  	<div class="row justify-content-center">
+						  	<div id="exercise2" class="row">
+								<i class="icon-circle-o mr-3 checkIcon"></i>
+								<button class="button-5" role="button">Exercise 2 : Print (part 2)</button>
+						  	</div>	
+					  	</div>
+					  	<div class="row justify-content-center">
+						  	<div id="exercise3" class="row">
+								<i class="icon-circle-o mr-3 checkIcon"></i>
+								<button class="button-5" role="button">Exercise 3 : Print (part 3)</button>
+						  	</div>	
+					  	</div>
+					  	<div class="row justify-content-center">
+						  	<div id="exercise4" class="row">
+								<i class="icon-circle-o mr-3 checkIcon"></i>
+								<button class="button-5" role="button">Exercise 4 : Variables (part 1)</button>
+						  	</div>	
+					  	</div>
+					  	<div class="row justify-content-center">
+						  	<div id="exercise5" class="row">
+								<i class="icon-circle-o mr-3 checkIcon"></i>
+								<button class="button-5" role="button">Exercise 5 : Variables (part 2)</button>
+						  	</div>	
+					  	</div>
+					</div>    	   
+					
+					<div id="exerciseFunctions" class="collapse">   		
+						<div class="row justify-content-center">
+							<div id="exercise6" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 6 : def (part 1)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise7" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 7 : def (part 2)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise8" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 8 : def (part 3)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise9" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 9 : return (part 1)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise10" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 10 : return (part 2)</button>
+							</div>	
+						</div>
 					</div>
-					<div class="row justify-content-center">
-						<div id="exercise3" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 3 (Print part 3)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise4" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 4 (Variables part 1)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise5" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 5 (Variables part 2)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise6" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 6 (def part 1)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise7" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 7 (def part 2)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise8" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 8 : def (part 3)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise9" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 9 : return (part 1)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise10" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 10 : return (part 2)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise11" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 11 : if (part 1)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise12" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 12 : if (part 2)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise13" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 13 : if (part 3)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise14" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 14 : Arrays (part 1)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise15" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 15 : Arrays (part 2)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise16" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 16 : Arrays (part 3)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise17" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 17 : Arrays (part 4)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise18" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 18 : Arrays (part 5)</button>
-						</div>	
-					</div>
-					<div class="row justify-content-center">
-						<div id="exercise19" class="row">
-						  	<i class="icon-circle-o mr-3 checkIcon"></i>
-						  	<button class="button-5" role="button">Exercise 19 : Arrays (part 6)</button>
-						</div>	
+					<div id="exerciseMoreBasics" class="collapse">
+						<div class="row justify-content-center">
+							<div id="exercise11" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 11 : if (part 1)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise12" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 12 : if (part 2)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise13" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 13 : if (part 3)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise14" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 14 : Arrays (part 1)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise15" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 15 : Arrays (part 2)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise16" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 16 : Arrays (part 3)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise17" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 17 : Arrays (part 4)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise18" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 18 : Arrays (part 5)</button>
+							</div>	
+						</div>
+						<div class="row justify-content-center">
+							<div id="exercise19" class="row">
+							  	<i class="icon-circle-o mr-3 checkIcon"></i>
+							  	<button class="button-5" role="button">Exercise 19 : Arrays (part 6)</button>
+							</div>	
+						</div>
 					</div>
     	    	</div>
     	  	</div>  

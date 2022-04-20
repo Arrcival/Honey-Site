@@ -21,8 +21,9 @@ h2 {
   font-size: 20px; }
 
 body {
-  position: relative; }
+  position: relative;}
   body:before {
+    height: 100%;
     position: absolute;
     content: "";
     z-index: 1;
@@ -76,8 +77,8 @@ aside {
     .show-sidebar aside .toggle .burger:before, .show-sidebar aside .toggle .burger span, .show-sidebar aside .toggle .burger:after {
       background: #fff; }
   .show-sidebar aside {
-    -webkit-box-shadow: 10px 0 30px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 10px 0 30px 0 rgba(0, 0, 0, 0.1); }
+    -webkit-box-shadow: 10px 0 30px 0 rgba(180, 75, 20, 0.3);
+    box-shadow: 10px 0 30px 0 rgba(180, 75, 20, 0.3); }
   aside .side-inner {
     background-color: #ffcf82;
     padding: 30px 0;
